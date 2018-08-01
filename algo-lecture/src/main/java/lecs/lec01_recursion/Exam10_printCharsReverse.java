@@ -1,16 +1,16 @@
 package lecs.lec01_recursion;
 
-public class Exam10_printCharsReverse {
+public class Exam09_printChars {
     public static void main(String args[]) {
-        printChars("SoHOT");
+        printCharsReverse("SoHOT");
     }
     
-    public static void printChars(String str) {
+    public static void printCharsReverse(String str) {
         if (str.length() == 0) // ""
             return;
         else {
+            printCharsReverse(str.substring(1));
             System.out.print(str.charAt(0));
-            printChars(str.substring(1));
         }
     }
     // 무한루프에 빠지지 않으려면? (두 가지 요구사항!)
