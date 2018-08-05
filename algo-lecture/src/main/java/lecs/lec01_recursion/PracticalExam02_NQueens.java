@@ -10,11 +10,40 @@ package lecs.lec01_recursion;
 // => Backtracking은 1) Recursion 2) Stack으로 구현할 수 있다.
 //
 // Backtracking Algorithm의 기본 구조.
-// 1) infeasible인가? (내려갈 필요 x)
+// 1) infeasible인가? (내려갈 필요 x) --> Promising Test
 // 2) 답인가?
 // 3) 꽝도 아니고 답도 아니면? => 자식 노드를 방문해야 한다.
 public class PracticalExam02_NQueens {
     public static void main(String args[]) {
+        System.out.println(queens(0));
     }
 
+    private static int N = 8;
+    private static int [] cols = new int [N + 1];
+
+    private static boolean queens(int level) {
+        if (!promising(level)) //  infeasible인가?
+            return false;
+        else if (level == N) { // success인가?
+            for (int i = 1; i <= N; i++)
+                System.out.println("(" + i + "," + cols[i] + ")");
+            return true;
+        }
+        for (int i = 1; i <= N; i++) { // 꽝도 아니고 답도 아니면? => 자식 노드 방문
+            cols[level + 1] = i;
+            if (queens(level + 1))
+                return true; // 자식 노드 방문시 success인가?
+        }
+        return false; // 자식 노드 모두 infeasible
+    }
+
+    private static boolean promising(int level) {
+        for (int i = 1; i < level; i++) {
+            if (cols[i]==cols[level]) // 동일 선상
+                return false;
+            else if (level - i == Math.abs(cols[level] - cols[i])) // 대각선
+                return false;
+        }
+        return true;
+    }
 }
