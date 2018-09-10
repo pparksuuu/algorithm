@@ -9,6 +9,9 @@ public class Main {
         System.out.println("Hello world!);
     }
 }
+
+참고 : 
+System.out.printf("%d", n); 로 실수형 출력 가능.
  */
 public class Q01_print {
     public static void main(String[] args) {
