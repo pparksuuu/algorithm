@@ -1,6 +1,6 @@
 package lecs.lec02_sort.copy;
 
-public class Exam01_selectionSort {
+public class Exam03_selectionSort {
     public static void main(String args[]) {
        func();
     }
