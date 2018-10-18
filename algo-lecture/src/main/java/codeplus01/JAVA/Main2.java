@@ -8,13 +8,14 @@ public class Main2 {
         int E = sc.nextInt();
         int S = sc.nextInt();
         int M = sc.nextInt();
-        
+
         int e = 1;
         int s = 1;
         int m = 1;
-        
-        for (int i = 0 ;;i++) {
-            System.out.println("hh");
+
+        boolean answer = true;
+        for (int i = 0; i < 5; i++) {
+            System.out.println("haha");
         }
     }
 } 
