@@ -13,7 +13,7 @@ public class Practice_1로만들기_TopDown {
         }
         d[n] = go(n - 1) + 1;
         if (n % 2 == 0) {
-            int temp = go(n / 2)  + 1;
+            int temp = go(n / 2) + 1;
             if (d[n] > temp) {
                 d[n] = temp;
             }
@@ -24,10 +24,8 @@ public class Practice_1로만들기_TopDown {
                 d[n] = temp;
             }
         }
-        
         return d[n];
     }
-    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
