@@ -1,6 +1,6 @@
 package lecs.lec01_recursion;
 
-public class Exam10_printCharsReverse {
+public class Exam09_printChars {
     public static void main(String args[]) {
         printChars("SoHOT");
     }

@@ -1,6 +1,8 @@
+package SelfStudy;
+
 import java.util.Scanner;
 
-public class Main {
+public class Test {
 	static Scanner sc = new Scanner(System.in);
 	static String[] arrays;
 	static String[] temp;
